@@ -37,7 +37,8 @@ function lex(input, type) {
                     []
                 ]);
             }
-        } else if(!value.match(/^\s*$/)) {
+        } else if(!value.match(/^\s*$/)&&output[output.length - 1][1]) {
+
             output[output.length - 1][1].push(value);
         }
     });
